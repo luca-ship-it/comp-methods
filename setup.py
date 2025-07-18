@@ -11,9 +11,9 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     install_requires=[
-        "numpy>=1.24.0",
-        "pandas>=1.5.0",
-        "numba>=0.57.0",
+        "numpy>=1.21.0,<1.22.2",    # passt noch zu pymc3 (<1.22.2)
+        "pandas>=1.4.0,<2.0.0",     # pandas v1.x ist mit numpy 1.21–1.22 kompatibel
+        "numba>=0.55.0,<0.58.0",    # wähle hier eine Version, die ohne numpy‑1.24 auskommt
     ],
     python_requires=">=3.8",
     classifiers=[
